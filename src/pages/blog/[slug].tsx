@@ -12,6 +12,8 @@ import React, { CSSProperties, useEffect } from 'react'
 import getBlogIndex from '../../lib/notion/getBlogIndex'
 import getNotionUsers from '../../lib/notion/getNotionUsers'
 import { getBlogLink, getDateStr } from '../../lib/blog-helpers'
+import Share from '../../components/share'
+import { BASE_BLOG_URL } from '../../lib/notion/server-constants'
 
 // Get the data for each blog post
 export async function getStaticProps({ params: { slug }, preview }) {
@@ -27,6 +29,7 @@ export async function getStaticProps({ params: { slug }, preview }) {
       props: {
         redirect: '/blog',
         preview: false,
+        baseBlogUrl: BASE_BLOG_URL
       },
       unstable_revalidate: 5,
     }
@@ -83,7 +86,7 @@ export async function getStaticPaths() {
 
 const listTypes = new Set(['bulleted_list', 'numbered_list'])
 
-const RenderPost = ({ post, redirect, preview }) => {
+const RenderPost = ({ post, redirect, preview, baseBlogUrl }) => {
   const router = useRouter()
 
   let listTagName: string | null = null
@@ -153,13 +156,13 @@ const RenderPost = ({ post, redirect, preview }) => {
       <div className={blogStyles.post}>
         <h1>{post.Page || ''}</h1>
         {post.Authors.length > 0 && (
-          <span className="authors">🙎‍♂️{post.Authors.join(' ')},</span>
+          <span className="authors">剋窶坂凾・旬post.Authors.join(' ')},</span>
         )}
         {post.Date && (
-          <span className="posted">🕒{getDateStr(post.Date)},</span>
+          <span className="posted">葡{getDateStr(post.Date)},</span>
         )}
         {post.Category.length > 0 && (
-          <span className="category">📙{post.Category}</span>
+          <span className="category">等{post.Category}</span>
         )}
     
         <hr />
@@ -425,6 +428,7 @@ const RenderPost = ({ post, redirect, preview }) => {
         })}
         
         <hr />
+        <Share text={post.Page} url={baseBlogUrl + router.asPath}></Share>
       </div>
     </>
   )
