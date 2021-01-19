@@ -156,13 +156,13 @@ const RenderPost = ({ post, redirect, preview, baseBlogUrl }) => {
       <div className={blogStyles.post}>
         <h1>{post.Page || ''}</h1>
         {post.Authors.length > 0 && (
-          <span className="authors">剋窶坂凾・旬post.Authors.join(' ')},</span>
+          <span className="authors">{post.Authors.join(' ')},</span>
         )}
         {post.Date && (
-          <span className="posted">葡{getDateStr(post.Date)},</span>
+          <span className="posted">🕒{getDateStr(post.Date)},</span>
         )}
         {post.Category.length > 0 && (
-          <span className="category">等{post.Category}</span>
+          <span className="category">📙{post.Category}</span>
         )}
     
         <hr />
