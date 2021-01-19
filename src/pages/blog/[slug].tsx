@@ -29,7 +29,6 @@ export async function getStaticProps({ params: { slug }, preview }) {
       props: {
         redirect: '/blog',
         preview: false,
-        baseBlogUrl: BASE_BLOG_URL
       },
       unstable_revalidate: 5,
     }
@@ -66,6 +65,7 @@ export async function getStaticProps({ params: { slug }, preview }) {
     props: {
       post,
       preview: preview || false,
+      baseBlogUrl: BASE_BLOG_URL,
     },
     unstable_revalidate: 10,
   }
