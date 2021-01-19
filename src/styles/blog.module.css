@@ -1,0 +1,164 @@
+.blogIndex {
+  padding: 0 5%;
+}
+
+.blogIndex h1 {
+  margin-bottom: 50px;
+}
+
+.previewAlertContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.previewAlert {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  border: 1px solid #eaeaea;
+  width: 400px;
+  padding: 16px;
+  border-radius: 5px;
+}
+
+.escapePreview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: black;
+  border: 1px solid black;
+  color: white;
+  padding: 10px;
+  height: 24px;
+  border-radius: 5px;
+  transition: all 0.2s ease 0s;
+}
+.escapePreview:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.titleContainer {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.titleContainer:hover {
+  background-color: white;
+  color: black;
+  border-bottom: 1px solid black;
+  cursor: pointer;
+}
+
+.draftBadge {
+  border-radius: 16px;
+  background-color: black;
+  color: white;
+  font-size: 14px;
+  font-weight: 200;
+  padding: 2px 7px;
+  margin-right: 6px;
+}
+
+.noPosts {
+  text-align: center;
+}
+
+.postPreview {
+  max-width: 600px;
+  margin: 10px auto;
+  padding-bottom: 10px;
+}
+
+.postPreview a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+}
+.postPreview:last-child {
+  border-bottom: none;
+}
+
+.postPreview h3,
+.post h1 {
+  margin-bottom: 0;
+}
+
+.postPreview h3{
+  font-size: 15px;
+}
+
+.post :global(h1),
+.post :global(h2),
+.post :global(h3) {
+  margin: 2rem 0 1.5rem 0;
+}
+
+.post code {
+  padding: 0.25rem 0.5rem;
+  margin: 0px;
+  font-size: 0.85em;
+  border-radius: 3px;
+  background: rgb(214, 219, 224);
+}
+
+.post :global(video),
+.post :global(img),
+.post :global(.asset-wrapper) {
+  max-width: 100%;
+  display: block;
+  margin: 0px auto;
+  object-fit: contain;
+}
+
+.post :global(.tweet) {
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.post :global(.callout) {
+  padding: 16px 16px 16px 12px;
+  display: flex;
+  width: 100%;
+  border-radius: 3px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  background: rgba(235, 236, 237, 0.6);
+}
+
+.post :global(.callout .text) {
+  margin-left: 8px;
+}
+
+.post :global(.underline) {
+  text-decoration: underline;
+}
+
+.postPreview :global(.posted) {
+  margin-bottom: 0.5em;
+}
+
+.post {
+  max-width: calc(600px + 10%);
+  margin: 0 auto;
+  padding: 5%;
+}
+
+.post :global(hr) {
+  margin-bottom: 2em;
+}
+
+.post :global(a + p) {
+  margin-top: 0;
+}
+
+.authors, .posted, .tag {
+    font-size: 14px;
+}
