@@ -7,7 +7,6 @@ import {
   HatenaIcon,
   HatenaShareButton,
 } from 'react-share'
-
 type Props = {
   text: string
   url: string
@@ -16,7 +15,7 @@ type Props = {
 export default ({ text, url }: Props) => {
   return (
     <>
-      <TwitterShareButton url={url} title={`Bosako Lab|${text}|@oshinbosako`}>
+      <TwitterShareButton url={url} title={text}>
         この記事をTwitterでシェア
       </TwitterShareButton> 
     </>
