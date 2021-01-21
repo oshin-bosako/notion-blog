@@ -16,9 +16,10 @@ type Props = {
 export default ({ text, url }: Props) => {
   return (
     <>
-      <TwitterShareButton url={url} title="Bosako Lab|${text}|@oshinbosako">
+      <TwitterShareButton url={url} title={`Bosako Lab|${text}|@oshinbosako`}>
         この記事をTwitterでシェア
       </TwitterShareButton> 
     </>
   )
 }
+{`#demo${this.state.id}`}
