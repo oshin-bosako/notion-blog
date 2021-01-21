@@ -65,7 +65,7 @@ export async function getStaticProps({ params: { slug }, preview }) {
     props: {
       post,
       preview: preview || false,
-      baseBlogUrl: BASE_BLOG_URL,
+      baseBlogUrl: "https://bosako.dev",
     },
     unstable_revalidate: 10,
   }
