@@ -382,3 +382,6 @@ footer span:nth-child(3) a {
     margin-right: 6px;
     margin-left: 6px;
 }
+Share {
+    border-bottom: 1px dashed black;
+}
