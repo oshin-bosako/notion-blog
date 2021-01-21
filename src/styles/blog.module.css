@@ -163,10 +163,10 @@
     font-size: 14px;
 }
 
-.react-share_sharebutton {
+.react-share__ShareButton {
   color: #0070f3;
   text-decoration: none;
 }
-.react-share_sharebutton:hover {
+.react-share__ShareButton {
 　text-decoration: underline;
 }
