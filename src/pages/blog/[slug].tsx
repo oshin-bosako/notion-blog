@@ -428,7 +428,7 @@ const RenderPost = ({ post, redirect, preview, baseBlogUrl }) => {
         })}
         
         <hr />
-        <p>もし記事がお役に立てたらぜひ→ <button className={blogStyles.escapePreview}><Share text={post.Page} url={baseBlogUrl + router.asPath}></Share></button></p>
+        <p>もし記事がお役に立てたらぜひ→ <button className="react-share_sharebutton" style="background-color:transparent;border:none;padding:0;font:inherit;color:inherit;cursor:pointer"><Share text={post.Page} url={baseBlogUrl + router.asPath}></Share></button></p>
       </div>
     </>
   )
