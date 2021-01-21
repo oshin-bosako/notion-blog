@@ -162,3 +162,7 @@
 .authors, .posted, .tag {
     font-size: 14px;
 }
+
+.sharelink {
+  border-bottom: 1px solid black;
+}
