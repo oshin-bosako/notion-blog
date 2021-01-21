@@ -170,3 +170,7 @@
 .react-share__ShareButton {
 　text-decoration: underline;
 }
+
+.react-share_sharebutton {
+  text-decoration: underline;
+}
