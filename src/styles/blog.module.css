@@ -163,6 +163,8 @@
     font-size: 14px;
 }
 
-.sharelink {
+.react-share_sharebutton {
+  background-color:transparent;
+  cursor:pointer; 
   border-bottom: 1px solid black;
 }
