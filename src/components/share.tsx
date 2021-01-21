@@ -22,4 +22,3 @@ export default ({ text, url }: Props) => {
     </>
   )
 }
-{`#demo${this.state.id}`}
