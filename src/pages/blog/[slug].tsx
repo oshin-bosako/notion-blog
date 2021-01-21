@@ -428,7 +428,7 @@ const RenderPost = ({ post, redirect, preview, baseBlogUrl }) => {
         })}
         
         <hr />
-        <p>もし記事がお役に立てたらぜひ→ <Share className="sharelink" text={post.Page} url={baseBlogUrl + router.asPath}></Share></p>
+        <p>もし記事がお役に立てたらぜひ→ <p className="sharelink"><Share text={post.Page} url={baseBlogUrl + router.asPath}></Share></p></p>
       </div>
     </>
   )
