@@ -384,3 +384,7 @@ footer span:nth-child(3) a {
   margin-right: 6px;
   margin-left: 6px;
 }
+
+.home_title {
+  text-align: center;
+}

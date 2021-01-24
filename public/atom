@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <feed xmlns="http://www.w3.org/2005/Atom">
+    <title>My Blog</title>
+    <subtitle>Blog</subtitle>
+    <link href="/atom" rel="self" type="application/rss+xml"/>
+    <link href="/" />
+    <updated>2021-01-24T05:18:02.209Z</updated>
+    <id>My Notion Blog</id>
+    <entry>
+      <id>/blog/inquiry-form</id>
+      <title>会社HPの問い合わせフォームをなくしました</title>
+      <link href="/blog/inquiry-form"/>
+      <updated>2021-01-21T15:00:00.791Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/inquiry-form">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Kayo Nishisaka</name></author>
+    </entry>
+    <entry>
+      <id>/blog/notion_blog-2</id>
+      <title>Notion Blogの開設に右往左往した話</title>
+      <link href="/blog/notion_blog-2"/>
+      <updated>2021-01-15T15:00:00.791Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/notion_blog-2">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Kayo Nishisaka</name></author>
+    </entry>
+    <entry>
+      <id>/blog/notion_blog-3</id>
+      <title>Notion Blogにライブラリを追加する方法</title>
+      <link href="/blog/notion_blog-3"/>
+      <updated>2021-01-23T15:00:00.791Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/notion_blog-3">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Kayo Nishisaka</name></author>
+    </entry>
+    <entry>
+      <id>/blog/profile</id>
+      <title>ABOUT &amp; PROFILE</title>
+      <link href="/blog/profile"/>
+      <updated>2021-01-14T15:00:00.792Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          <p>About</p><p>自分のために、勉強したことをアウトプットしていく技術ブログです。</p><p>ゆくゆくは制御盤のことを書いていきたいのですが、まずは最近触りはじめたラズパイの話を書いていこうと思っています。</p><p>Profile</p><p>西坂夏代（Kayo Nishisaka）／おしんボサ子</p><p>1989年生まれ</p><p>大阪在住/ 岐阜出身。</p><p>夫が社長となり、制御盤屋を夫婦２名でやってます。</p><p>　</p>
+          <p class="more">
+            <a href="/blog/profile">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Kayo Nishisaka</name></author>
+    </entry>
+    <entry>
+      <id>/blog/raspi-materials</id>
+      <title>ラズパイで最初に揃えたもの</title>
+      <link href="/blog/raspi-materials"/>
+      <updated>2020-12-15T15:00:00.792Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/raspi-materials">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Kayo Nishisaka</name></author>
+    </entry>
+    <entry>
+      <id>/blog/raspi-os-install</id>
+      <title>Raspbian OSのインストールと初期設定</title>
+      <link href="/blog/raspi-os-install"/>
+      <updated>2021-01-18T15:00:00.792Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/raspi-os-install">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Kayo Nishisaka</name></author>
+    </entry>
+  </feed>

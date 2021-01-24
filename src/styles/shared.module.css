@@ -1,11 +1,12 @@
 .layout img {
   margin: auto;
-  max-width: 98%;
+  max-width: 50%;
   display: block;
-  height: auto;
+  height: 50%;
 }
 
+.layout,
 .layout h1,
 .layout h2 {
-  text-align: center;
+  text-align: left;
 }

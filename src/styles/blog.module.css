@@ -3,7 +3,9 @@
 }
 
 .blogIndex h1 {
+  font-size: 20px;
   margin-bottom: 50px;
+  text-decoration: underline;
 }
 
 .previewAlertContainer {
@@ -90,7 +92,7 @@
   margin-bottom: 0;
 }
 
-.postPreview h3{
+.postPreview h3 {
   font-size: 15px;
 }
 
@@ -159,8 +161,10 @@
   margin-top: 0;
 }
 
-.authors, .posted, .tag {
-    font-size: 14px;
+.authors,
+.posted,
+.tag {
+  font-size: 14px;
 }
 
 .react-share__ShareButton {
@@ -168,7 +172,7 @@
   text-decoration: none;
 }
 .react-share__ShareButton {
-　text-decoration: underline;
+  　text-decoration: underline;
 }
 
 .react-share_sharebutton {
