@@ -161,8 +161,8 @@ const RenderPost = ({ post, redirect, preview, baseBlogUrl }) => {
         {post.Date && (
           <span className="posted">🕒{getDateStr(post.Date)},</span>
         )}
-        {post.Category.length > 0 && (
-          <span className="category">📙{post.Category}</span>
+        {post.Tag.length > 0 && (
+          <span className="tag">{post.Tag}</span>
         )}
     
         <hr />

@@ -83,11 +83,7 @@ export default ({ posts = [], preview }) => {
               {post.Date && (
                 <span className="posted">🕒{getDateStr(post.Date)},</span>
               )}
-              {post.Category.length > 0 && (
-                <span className="category">📙{post.Category}</span>
-              )}
-              
-              
+              {post.Tag.length > 0 && <span className="tag">{post.Tag}</span>}
             </div>
           )
         })}
@@ -96,7 +92,8 @@ export default ({ posts = [], preview }) => {
   )
 }
 
-{/*
+{
+  /*
               <p>
                 {(!post.preview || post.preview.length === 0) &&
                   'No preview available'}
@@ -104,4 +101,5 @@ export default ({ posts = [], preview }) => {
                   textBlock(block, true, `${post.Slug}${idx}`)
                 )}
               </p>
-*/}
+*/
+}
