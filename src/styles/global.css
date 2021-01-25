@@ -256,7 +256,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  　text-decoration: underline;
+  text-decoration: underline;
 }
 
 .links {
@@ -386,5 +386,9 @@ footer span:nth-child(3) a {
 }
 
 .home_title {
+  text-align: center;
+}
+
+.tag_title h1 {
   text-align: center;
 }
