@@ -6,12 +6,13 @@ import styles from '../styles/header.module.css'
 import Analytics from './analytics'
 
 const navItems: { label: string; page?: string; link?: string }[] = [
-  { label: 'Home', page: '/' },
-  { label: 'Blog', page: '/blog' },
-  { label: 'About', page: '/blog/profile' },  
+  { label: 'Blog', page: '/' },
+  { label: 'About', page: '/blog/profile' },
 ]
-  {/*  { label: 'Contact', page: '/contact' },　
-  { label: 'Source Code', link: 'https://github.com/ijjk/notion-blog' }, */}
+{
+  /*  { label: 'Contact', page: '/contact' },　
+  { label: 'Source Code', link: 'https://github.com/ijjk/notion-blog' }, */
+}
 
 const ogImageUrl = 'https://bosako.dev/og-image.jpg'
 
@@ -31,10 +32,7 @@ export default ({ titlePre = '' }) => {
           }}
         />
         <title>{titlePre ? `${titlePre} |` : ''} Bosako Lab</title>
-        <meta
-          name="description"
-          content="Try everything."
-        />
+        <meta name="description" content="Try everything." />
         <meta name="og:title" content="Bosako Lab" />
         <meta property="og:image" content={ogImageUrl} />
         <meta name="twitter:site" content="@oshinbosako" />
@@ -60,5 +58,3 @@ export default ({ titlePre = '' }) => {
     </header>
   )
 }
-
-
