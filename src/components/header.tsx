@@ -3,7 +3,6 @@ import Head from 'next/head'
 import ExtLink from './ext-link'
 import { useRouter } from 'next/router'
 import styles from '../styles/header.module.css'
-import Analytics from './analytics'
 
 const navItems: { label: string; page?: string; link?: string }[] = [
   { label: 'Blog', page: '/' },
@@ -38,7 +37,6 @@ export default ({ titlePre = '' }) => {
         <meta name="twitter:site" content="@oshinbosako" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content={ogImageUrl} />
-        <Analytics />
       </Head>
       <ul>
         {navItems.map(({ label, page, link }) => (
