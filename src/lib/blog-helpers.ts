@@ -6,6 +6,31 @@ export const getTagLink = (tag: string) => {
   return `/blog/tag/${tag}`
 }
 
+export const getTagName = (tag: string) => {
+  var tagName: string = `/blog/tag/${tag}`
+  switch (tag) {
+    case 'notionBlog':
+      tagName = '📒Notion'
+      break
+    case 'Python':
+      tagName = '🐍Python'
+      break
+    case 'profile':
+      tagName = '👩🏻Profile'
+      break
+    case 'controlPanel':
+      tagName = '🔧制御盤'
+      break
+    case 'raspberryPi':
+      tagName = '🍓Raspberry Pi'
+      break
+    case 'work':
+      tagName = '⛑️仕事の話'
+      break
+  }
+  return tagName
+}
+
 export const getDateStr = date => {
   return new Date(date).toLocaleString('ja-JP', {
     year: 'numeric',

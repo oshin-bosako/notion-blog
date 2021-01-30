@@ -11,6 +11,7 @@ import {
   getDateStr,
   postIsPublished,
   getTagLink,
+  getTagName,
 } from '../lib/blog-helpers'
 import { textBlock } from '../lib/notion/renderers'
 import getNotionUsers from '../lib/notion/getNotionUsers'
@@ -109,7 +110,7 @@ export default ({ posts = [], allTags = [], preview }) => {
                     as={getTagLink(tag)}
                     key={getTagLink(tag)}
                   >
-                    <span className={blogStyles.tag}>{tag}</span>
+                    <span className={blogStyles.tag}>{getTagName(tag)}</span>
                   </Link>
                 ))}
             </div>
