@@ -387,4 +387,9 @@ footer span:nth-child(3) a {
 
 .tag_title h1 {
   text-align: center;
+  padding-bottom: 10px;
+}
+
+.tag_title {
+  padding: 0 5%;
 }
