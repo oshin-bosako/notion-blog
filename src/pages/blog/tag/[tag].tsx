@@ -9,6 +9,7 @@ import {
   getDateStr,
   postIsPublished,
   getTagLink,
+  getTagName
 } from '../../../lib/blog-helpers'
 import { textBlock } from '../../../lib/notion/renderers'
 import getNotionUsers from '../../../lib/notion/getNotionUsers'
@@ -86,7 +87,7 @@ export default ({ tag, posts = [], preview }) => {
         </div>
       )}
       <div className="tag_title">
-        <h1>{tag}</h1>
+        <h1>{getTagName(tag)}</h1>
         {posts.length === 0 && (
           <p className={blogStyles.noPosts}>There are no posts yet</p>
         )}
@@ -118,7 +119,7 @@ export default ({ tag, posts = [], preview }) => {
                 post.Tags.length > 0 &&
                 post.Tags.map(tag => (
                   <Link href="/blog/tag/[tag]" as={getTagLink(tag)} key={getTagLink(tag)}>
-                    <span className={blogStyles.tag}>{tag}</span>
+                    <span className={blogStyles.tag}>{getTagName(tag)}</span>
                   </Link>
               ))}
             </div>
