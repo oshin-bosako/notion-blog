@@ -7,12 +7,12 @@ export const getTagLink = (tag: string) => {
 }
 
 export const getTagName = (tag: string) => {
-  var tagName: string = `/blog/tag/${tag}`
+  var tagName: string = `${tag}`
   switch (tag) {
     case 'notionBlog':
       tagName = '📒Notion'
       break
-    case 'Python':
+    case 'python':
       tagName = '🐍Python'
       break
     case 'profile':
