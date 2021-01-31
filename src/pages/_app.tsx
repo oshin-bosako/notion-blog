@@ -11,7 +11,7 @@ export default ({ Component, pageProps }) => {
   useEffect(() => {
     const handleRouteChange = url => {
       if (
-        (location.host === 'bosako.dev') |
+        location.host === 'bosako.dev' ||
         'https://notion-blog5.vercel.app/'
       ) {
         gtag.pageview(url)
