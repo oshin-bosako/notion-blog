@@ -139,6 +139,7 @@
 
 .post :global(.callout .text) {
   margin-left: 8px;
+  font-size: 14px;
 }
 
 .post :global(.underline) {
