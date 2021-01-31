@@ -10,7 +10,10 @@ export default ({ Component, pageProps }) => {
   const router = useRouter()
   useEffect(() => {
     const handleRouteChange = url => {
-      if (location.host === 'alpacat.com') {
+      if (
+        (location.host === 'bosako.dev') |
+        'https://notion-blog5.vercel.app/'
+      ) {
         gtag.pageview(url)
       }
     }
