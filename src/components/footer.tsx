@@ -7,11 +7,12 @@ export default () => (
       <hr />
       <div className="footer_text">
         <p className="footer_logo">Bosako Lab.</p>
-        <p>このブログはNotion Blogをカスタマイズしています。</p>
         <p>
-          オリジナルは
-          <a href="https://github.com/ijjk/notion-blog">ijjk/notion-blog</a>です
+          このブログは
+          <a href="https://github.com/ijjk/notion-blog">Notion Blog</a>
+          をカスタマイズしています。
         </p>
+        <p></p>
       </div>
     </footer>
   </>
