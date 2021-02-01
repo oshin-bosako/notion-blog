@@ -206,16 +206,19 @@
   margin: 4px 0px 4px 5px;
   height: 24px;
   line-height: 22px;
-  border-radius: 10px;
+  border-radius: 8px;
   text-decoration: underline;
 
   background-color: #f0f0ef;
   background-image: radial-gradient(#ffffff 50%, transparent 30%);
-  background-size: 5px 5px;
+  background-size: 3px 3px;
 }
 
 .tableOfContents {
-  background-color: #f2f2f2;
+  background-color: #f0f0f0;
+  background-image: radial-gradient(#ffffff 50%, transparent 30%);
+  background-size: 3px 3px;
+
   border-radius: 8px;
   padding: 1em;
   margin-top: 2em;
@@ -246,8 +249,20 @@
   padding-left: 1em;
 }
 
+.tableOfContents .heading1:before {
+  content: '▷ ';
+  font-size: 8px;
+  color: #666666;
+}
+
 .tableOfContents .heading2 {
   padding-left: 2em;
+}
+
+.tableOfContents .heading2:before {
+  content: '-- ';
+  font-size: 8px;
+  color: #666666;
 }
 
 .tableOfContents .heading3 {
