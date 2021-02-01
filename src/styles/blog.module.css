@@ -208,5 +208,8 @@
   line-height: 22px;
   border-radius: 10px;
   text-decoration: underline;
-  background-color: rgb(240, 240, 240);
+
+  background-color: #f0f0ef;
+  background-image: radial-gradient(#ffffff 50%, transparent 30%);
+  background-size: 5px 5px;
 }
