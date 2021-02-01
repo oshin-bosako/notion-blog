@@ -10,9 +10,8 @@ export default () => (
         <p>
           このブログは
           <a href="https://github.com/ijjk/notion-blog">Notion Blog</a>
-          をカスタマイズしています。
+          をカスタマイズしています
         </p>
-        <p></p>
       </div>
     </footer>
   </>
