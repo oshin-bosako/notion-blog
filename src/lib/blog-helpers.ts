@@ -10,7 +10,7 @@ export const getTagName = (tag: string) => {
   var tagName: string = `${tag}`
   switch (tag) {
     case 'notionBlog':
-      tagName = '📒Notion'
+      tagName = '📒NotionBlog'
       break
     case 'python':
       tagName = '🐍Python'
