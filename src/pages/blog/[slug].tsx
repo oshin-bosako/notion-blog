@@ -277,18 +277,19 @@ const RenderPost = ({ post, redirect, preview, baseBlogUrl }) => {
           } else {
             // notion resource
             child = (
-              <Comp
-                key={!useWrapper ? id : undefined}
-                src={`/api/asset?assetUrl=${encodeURIComponent(
-                  display_source as any
-                )}&blockId=${id}`}
-                controls={!isImage}
-                alt={`An ${isImage ? 'image' : 'video'} from Notion`}
-                loop={!isImage}
-                muted={!isImage}
-                autoPlay={!isImage}
-                style={childStyle}
-              />
+              <figure key={id} style={{ margin: 0, marginBottom: 24 }}>
+                <Zoom overlayBgColorStart="rgba(255, 255, 255, 0)" overlayBgColorEnd="rgba(0, 0, 0, 0.50)">
+                  <Comp
+                    src={`/api/asset?assetUrl=${encodeURIComponent(format.display_source as any)}&blockId=${id}`}
+                    controls={!isImage}
+                    loop={!isImage}
+                    muted={!isImage}
+                    autoPlay={!isImage}
+                    style={{ width:350, marginBottom: 4 }}
+                    className={blogStyles.postImg}
+                  />
+                </Zoom>
+            </figure>
             )
           }
 
@@ -438,10 +439,10 @@ const RenderPost = ({ post, redirect, preview, baseBlogUrl }) => {
       <div className={blogStyles.post}>
         <h1>{post.Page || ''}</h1>
         {post.Authors.length > 0 && (
-          <span className="authors">{post.Authors.join(' ')},</span>
+          <span className="authors">{post.Authors.join(' ')}</span>
         )}
         {post.Date && (
-          <span className="posted">🕒{getDateStr(post.Date)},</span>
+          <span className="posted">🕒{getDateStr(post.Date)}</span>
         )}
         {post.Tags &&
           post.Tags.length > 0 &&

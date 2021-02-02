@@ -113,7 +113,7 @@ export default ({ tag, posts = [], preview }) => {
                 </Link>
               </h3>
               {post.Date && (
-                <span className="posted">🕒{getDateStr(post.Date)},</span>
+                <span className="posted">🕒{getDateStr(post.Date)}</span>
               )}
               {post.Tags &&
                 post.Tags.length > 0 &&
