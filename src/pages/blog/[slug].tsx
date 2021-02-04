@@ -285,7 +285,7 @@ const RenderPost = ({ post, redirect, preview, baseBlogUrl }) => {
                     loop={!isImage}
                     muted={!isImage}
                     autoPlay={!isImage}
-                    style={{ width:350, marginBottom: 4 }}
+                    style={{ width:500, marginBottom: 4 }}
                     className={blogStyles.postImg}
                   />
                 </Zoom>
