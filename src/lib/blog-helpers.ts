@@ -27,6 +27,9 @@ export const getTagName = (tag: string) => {
     case 'work':
       tagName = '⛑️仕事の話'
       break
+    case 'raspi-post':
+      tagName = '📣ラズパイから発信しよう'
+      break
   }
   return tagName
 }
