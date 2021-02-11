@@ -4,7 +4,6 @@ import styles from '../styles/footer.module.css'
 export default () => (
   <>
     <footer>
-      <hr />
       <div className="footer_text">
         <p className="footer_logo">Bosako Lab.</p>
         <p>
