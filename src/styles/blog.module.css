@@ -249,20 +249,20 @@
   padding-left: 1em;
 }
 
-.tableOfContents .heading1:before {
-  content: '▷ ';
+.tableOfContents .heading2:before {
+  content: '> ';
+  font-size: 8px;
+  color: #666666;
+}
+
+.tableOfContents .heading3:before {
+  content: '>> ';
   font-size: 8px;
   color: #666666;
 }
 
 .tableOfContents .heading2 {
   padding-left: 2em;
-}
-
-.tableOfContents .heading2:before {
-  content: '-- ';
-  font-size: 8px;
-  color: #666666;
 }
 
 .tableOfContents .heading3 {
