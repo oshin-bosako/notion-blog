@@ -11,7 +11,14 @@ import getPageData from '../../lib/notion/getPageData'
 import React, { CSSProperties, useEffect } from 'react'
 import getBlogIndex from '../../lib/notion/getBlogIndex'
 import getNotionUsers from '../../lib/notion/getNotionUsers'
-import { getBlogLink, getDateStr, getTagLink, getTagName } from '../../lib/blog-helpers'
+import { 
+  getBlogLink, 
+  getDateStr, 
+  getTagLink, 
+  getTagName, 
+  getTagAnnounce,
+  getUpdateStr
+} from '../../lib/blog-helpers'
 import Share from '../../components/share'
 import { BASE_BLOG_URL } from '../../lib/notion/server-constants'
 import Zoom from 'react-medium-image-zoom'
@@ -444,6 +451,9 @@ const RenderPost = ({ post, redirect, preview, baseBlogUrl }) => {
         {post.Date && (
           <span className="posted">🕒{getDateStr(post.Date)}</span>
         )}
+        {post.Update && (
+          <span className="posted">🔄{getUpdateStr(post.Update)}</span>
+        )}
         {post.Tags &&
           post.Tags.length > 0 &&
           post.Tags.map(tag => (
@@ -453,7 +463,6 @@ const RenderPost = ({ post, redirect, preview, baseBlogUrl }) => {
         ))}
     
         <hr />
-
 
         {contents}
         <hr />

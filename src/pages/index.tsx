@@ -12,6 +12,7 @@ import {
   postIsPublished,
   getTagLink,
   getTagName,
+  getUpdateStr,
 } from '../lib/blog-helpers'
 import { textBlock } from '../lib/notion/renderers'
 import getNotionUsers from '../lib/notion/getNotionUsers'
@@ -101,6 +102,9 @@ export default ({ posts = [], allTags = [], preview }) => {
               </h3>
               {post.Date && (
                 <span className="posted">🕒{getDateStr(post.Date)}</span>
+              )}
+              {post.Update && (
+                <span className="posted">🔄{getUpdateStr(post.Update)}</span>
               )}
               {post.Tags &&
                 post.Tags.length > 0 &&

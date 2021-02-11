@@ -42,6 +42,14 @@ export const getDateStr = date => {
   })
 }
 
+export const getUpdateStr = date => {
+  return new Date(date).toLocaleString('ja-JP', {
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  })
+}
+
 export const postIsPublished = (post: any) => {
   return post.Published === 'Yes'
 }
