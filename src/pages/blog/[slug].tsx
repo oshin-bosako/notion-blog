@@ -16,7 +16,6 @@ import {
   getDateStr, 
   getTagLink, 
   getTagName, 
-  getTagAnnounce,
   getUpdateStr
 } from '../../lib/blog-helpers'
 import Share from '../../components/share'
