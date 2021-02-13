@@ -111,8 +111,16 @@
 }
 
 .post :global(video),
-.post :global(img),
 .post :global(.asset-wrapper) {
+  max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: contain;
+  padding: 0 !important;
+}
+
+.post :global(img) {
   max-width: 100%;
   display: block;
   margin-left: auto;
