@@ -268,3 +268,20 @@
 .tableOfContents .heading3 {
   padding-left: 3em;
 }
+
+.post :global(h2) {
+  font-size: 20px;
+}
+
+.post :global(h2):before {
+  content: '> ';
+}
+
+.post :global(h3) {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.post :global(h3):before {
+  content: '>> ';
+}
