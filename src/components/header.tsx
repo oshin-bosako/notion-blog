@@ -32,7 +32,7 @@ export default ({ titlePre = '' }) => {
         />
         <title>{titlePre ? `${titlePre} |` : ''} Bosako Lab</title>
         <meta name="description" content="Try everything." />
-        <meta name="og:title" content="Bosako Lab" />
+        <meta name="og:title" content={titlePre ? `${titlePre}` : ''} />
         <meta property="og:image" content={ogImageUrl} />
         <meta name="twitter:site" content="@oshinbosako" />
         <meta name="twitter:card" content="summary_large_image" />
