@@ -11,6 +11,12 @@ export default () => (
           <a href="https://github.com/ijjk/notion-blog">Notion Blog</a>
           をカスタマイズしています
         </p>
+        <p>
+          -Source Code-{' '}
+          <a href="https://github.com/ijjk/notion-blog">
+            oshin-bosako/notion-blog-customized
+          </a>
+        </p>
       </div>
     </footer>
   </>
