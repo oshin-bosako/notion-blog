@@ -13,7 +13,7 @@ export default () => (
         </p>
         <p>
           -Source Code-{' '}
-          <a href="https://github.com/ijjk/notion-blog">
+          <a href="https://github.com/oshin-bosako/notion-blog-customized">
             oshin-bosako/notion-blog-customized
           </a>
         </p>
