@@ -30,12 +30,6 @@ export const getTagName = (tag: string) => {
     case 'raspi-post':
       tagName = '📣ラズパイから発信しよう'
       break
-    case 'emailnotification':
-      tagName = '📬Eメール通知プログラム'
-      break
-    case 'minecraft':
-      tagName = '🗺️Minecraft'
-      break
   }
   return tagName
 }
