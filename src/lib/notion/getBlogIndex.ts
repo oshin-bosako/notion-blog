@@ -23,7 +23,7 @@ export default async function getBlogIndex(previews = true) {
     try {
       const data = await rpc('loadPageChunk', {
         pageId: BLOG_INDEX_ID,
-        limit: 999, // TODO: figure out Notion's way of handling pagination
+        limit: 100, // TODO: figure out Notion's way of handling pagination
         cursor: { stack: [] },
         chunkNumber: 0,
         verticalColumns: false,
@@ -66,7 +66,7 @@ export default async function getBlogIndex(previews = true) {
             const timeB = postB.Date
             return Math.sign(timeB - timeA)
           })
-          .map(async postKey => {
+          .map(async (postKey) => {
             await sema.acquire()
             const post = postsTable[postKey]
             post.preview = post.id
