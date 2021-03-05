@@ -18,7 +18,6 @@ import {
   getTagName,
   getUpdateStr,
 } from '../../lib/blog-helpers'
-import Share from '../../components/share'
 import { BASE_BLOG_URL } from '../../lib/notion/server-constants'
 import Zoom from 'react-medium-image-zoom'
 
