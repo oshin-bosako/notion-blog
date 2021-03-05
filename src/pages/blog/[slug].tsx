@@ -11,12 +11,12 @@ import getPageData from '../../lib/notion/getPageData'
 import React, { CSSProperties, useEffect } from 'react'
 import getBlogIndex from '../../lib/notion/getBlogIndex'
 import getNotionUsers from '../../lib/notion/getNotionUsers'
-import { 
-  getBlogLink, 
-  getDateStr, 
-  getTagLink, 
-  getTagName, 
-  getUpdateStr
+import {
+  getBlogLink,
+  getDateStr,
+  getTagLink,
+  getTagName,
+  getUpdateStr,
 } from '../../lib/blog-helpers'
 import Share from '../../components/share'
 import { BASE_BLOG_URL } from '../../lib/notion/server-constants'
@@ -66,13 +66,13 @@ export async function getStaticProps({ params: { slug }, preview }) {
   }
 
   const { users } = await getNotionUsers(post.Authors || [])
-  post.Authors = Object.keys(users).map(id => users[id].full_name)
+  post.Authors = Object.keys(users).map((id) => users[id].full_name)
 
   return {
     props: {
       post,
       preview: preview || false,
-      baseBlogUrl: "https://bosako.dev",
+      baseBlogUrl: 'https://bosako.dev',
     },
     revalidate: 10,
   }
@@ -85,8 +85,8 @@ export async function getStaticPaths() {
   // for actually published ones
   return {
     paths: Object.keys(postsTable)
-      .filter(post => postsTable[post].Published === 'Yes')
-      .map(slug => getBlogLink(slug)),
+      .filter((post) => postsTable[post].Published === 'Yes')
+      .map((slug) => getBlogLink(slug)),
     fallback: true,
   }
 }
@@ -186,10 +186,10 @@ const RenderPost = ({ post, redirect, preview, baseBlogUrl }) => {
           React.createElement(
             listTagName,
             { key: listLastId! },
-            Object.keys(listMap).map(itemId => {
+            Object.keys(listMap).map((itemId) => {
               if (listMap[itemId].isNested) return null
 
-              const createEl = item =>
+              const createEl = (item) =>
                 React.createElement(
                   components.li || 'ul',
                   { key: item.key },
@@ -198,7 +198,9 @@ const RenderPost = ({ post, redirect, preview, baseBlogUrl }) => {
                     ? React.createElement(
                         components.ul || 'ul',
                         { key: item + 'sub-list' },
-                        item.nested.map(nestedId => createEl(listMap[nestedId]))
+                        item.nested.map((nestedId) =>
+                          createEl(listMap[nestedId])
+                        )
                       )
                     : null
                 )
@@ -244,9 +246,10 @@ const RenderPost = ({ post, redirect, preview, baseBlogUrl }) => {
           const roundFactor = Math.pow(10, 2)
           // calculate percentages
           const width = block_width
-            ? `${Math.round(
-                (block_width / baseBlockWidth) * 100 * roundFactor
-              ) / roundFactor}%`
+            ? `${
+                Math.round((block_width / baseBlockWidth) * 100 * roundFactor) /
+                roundFactor
+              }%`
             : block_height || '100%'
 
           const isImage = type === 'image'
@@ -284,18 +287,23 @@ const RenderPost = ({ post, redirect, preview, baseBlogUrl }) => {
             // notion resource
             child = (
               <figure key={id} style={{ margin: 0, marginBottom: 24 }}>
-                <Zoom overlayBgColorStart="rgba(255, 255, 255, 0)" overlayBgColorEnd="rgba(0, 0, 0, 0.50)">
+                <Zoom
+                  overlayBgColorStart="rgba(255, 255, 255, 0)"
+                  overlayBgColorEnd="rgba(0, 0, 0, 0.50)"
+                >
                   <Comp
-                    src={`/api/asset?assetUrl=${encodeURIComponent(format.display_source as any)}&blockId=${id}`}
+                    src={`/api/asset?assetUrl=${encodeURIComponent(
+                      format.display_source as any
+                    )}&blockId=${id}`}
                     controls={!isImage}
                     loop={!isImage}
                     muted={!isImage}
                     autoPlay={!isImage}
-                    style={{ width:'100%', marginBottom: 4 }}
+                    style={{ width: '100%', marginBottom: 4 }}
                     className={blogStyles.postImg}
                   />
                 </Zoom>
-            </figure>
+              </figure>
             )
           }
 
@@ -407,7 +415,7 @@ const RenderPost = ({ post, redirect, preview, baseBlogUrl }) => {
         <div className={blogStyles.tableOfContents}>
           <span>目次</span>
           <ul className={blogStyles.headings}>
-            {headings.map(heading => {
+            {headings.map((heading) => {
               let headingClass = blogStyles.heading1
               if (heading.type === 'h2') {
                 headingClass = blogStyles.heading2
@@ -447,25 +455,22 @@ const RenderPost = ({ post, redirect, preview, baseBlogUrl }) => {
         {post.Authors.length > 0 && (
           <span className="authors">{post.Authors.join(' ')}</span>
         )}
-        {post.Date && (
-          <span className="posted">🕒{getDateStr(post.Date)}</span>
-        )}
+        {post.Date && <span className="posted">🕒{getDateStr(post.Date)}</span>}
         {post.Update && (
           <span className="posted">🔄{getUpdateStr(post.Update)}</span>
         )}
         {post.Tags &&
           post.Tags.length > 0 &&
-          post.Tags.map(tag => (
+          post.Tags.map((tag) => (
             <Link href="/blog/tag/[tag]" as={getTagLink(tag)}>
               <span className={blogStyles.tag}>{getTagName(tag)}</span>
             </Link>
-        ))}
-    
+          ))}
+
         <hr />
 
         {contents}
         <hr />
-        <p>🔵<span className="react-share_sharebutton"><Share text={post.Page} url={baseBlogUrl + router.asPath}></Share></span></p>
       </div>
     </>
   )

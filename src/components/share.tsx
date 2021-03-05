@@ -1,3 +1,4 @@
+/*
 import React from 'react'
 import {
   FacebookIcon,
@@ -21,3 +22,4 @@ export default ({ text, url }: Props) => {
     </>
   )
 }
+*/
