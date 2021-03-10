@@ -36,11 +36,13 @@ export const getTagName = (tag: string) => {
     case 'minecraft':
       tagName = '🗺️Minecraft'
       break
+    case 'parenting':
+      tagName = '✍️子育て'
   }
   return tagName
 }
 
-export const getDateStr = date => {
+export const getDateStr = (date) => {
   return new Date(date).toLocaleString('ja-JP', {
     year: 'numeric',
     month: '2-digit',
@@ -48,7 +50,7 @@ export const getDateStr = date => {
   })
 }
 
-export const getUpdateStr = date => {
+export const getUpdateStr = (date) => {
   return new Date(date).toLocaleString('ja-JP', {
     year: 'numeric',
     month: '2-digit',
@@ -60,7 +62,7 @@ export const postIsPublished = (post: any) => {
   return post.Published === 'Yes'
 }
 
-export const normalizeSlug = slug => {
+export const normalizeSlug = (slug) => {
   if (typeof slug !== 'string') return slug
 
   let startingSlash = slug.startsWith('/')
