@@ -1,4 +1,4 @@
-# Notion Blog
+# Notion B l o g
 
 このリポジトリは 、https://github.com/ijjk/notion-blog をカスタマイズしたものです。
 
